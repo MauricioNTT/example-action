@@ -12,5 +12,5 @@ runs:
     - run: echo "${{ inputs.message }}"
       shell: bash
 
-    - run: echo "${{ env.message }}"
+    - run: echo "${{ vars.message }}"
       shell: bash
