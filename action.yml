@@ -14,3 +14,10 @@ runs:
 
     - run: echo "${{ env.message }}"
       shell: bash
+      
+    - id: output-step
+      run: echo "result='Hello Outputs'" >> $GITHUB_OUTPUT
+      shell: bash
+    
+    - run: echo "${{ steps.output-step.outputs.result }}"
+      shell: bash
