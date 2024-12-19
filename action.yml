@@ -1,8 +1,13 @@
 name: Example action
+inputs:
+  message: 
+    description: "uma mensagem simples"
+    default: "Hello Action!"
+    type: string
 
 runs:
   using: composite
   steps:
   
-    - run: echo "Hello Action!"
+    - run: echo "${{ inputs.message }}"
       shell: bash
