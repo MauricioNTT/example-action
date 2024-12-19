@@ -18,10 +18,10 @@ runs:
     - id: output-step
       run: |
         echo "result='Hello Outputs'" >> $GITHUB_OUTPUT
-        echo "message='Hello env 2'" >> $GITHUB_ENV
+        echo "message2='Hello env 2'" >> $GITHUB_ENV
       shell: bash
     
     - run: | 
         echo "${{ steps.output-step.outputs.result }}"
-        echo "${{ env.message }}"
+        echo "${{ env.message2 }}"
       shell: bash
